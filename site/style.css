@@ -1,0 +1,132 @@
+/* Placeholder skin for joelugwumadu.dev (#9). Deliberately restrained — the real
+   portfolio gets its own direction brief and design day. What is NOT placeholder
+   is the invisible layer from DESIGN.md: the spacing scale, the type scale, the
+   motion rhythm, focus rings, and both themes designed rather than inverted. */
+
+:root {
+  --space-2: 8px;  --space-3: 12px; --space-4: 16px; --space-6: 24px;
+  --space-8: 32px; --space-12: 48px; --space-16: 64px; --space-24: 96px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-base: 250ms;
+
+  --ink: #12130f;
+  --ink-soft: #55584e;
+  --paper: #f4f2ec;
+  --rule: #d8d4c8;
+  --accent: #1f4d3d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #ececE4;
+    --ink-soft: #9a9c92;
+    --paper: #101210;
+    --rule: #292b27;
+    --accent: #7fc9a8;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: var(--space-8) var(--space-6);
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 62ch;
+  animation: rise var(--dur-base) var(--ease-out) both;
+}
+
+/* One animated element per viewport; more reads as generated. */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wrap { animation: none; }
+}
+
+.eyebrow {
+  margin: 0 0 var(--space-4);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+h1 {
+  margin: 0 0 var(--space-6);
+  font-size: 48px;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 620;
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 32px; }
+}
+
+.lede  { margin: 0 0 var(--space-8); font-size: 18px; color: var(--ink-soft); }
+.note  { margin: var(--space-8) 0 var(--space-12); font-size: 14px; color: var(--ink-soft); }
+
+.count {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+  margin: 0;
+  padding: var(--space-6) 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.count div { margin: 0; }
+
+.count dt {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.count dd {
+  margin: var(--space-2) 0 0;
+  font-size: 32px;
+  line-height: 1.1;
+  /* Numbers in a column must not jitter as they change. */
+  font-variant-numeric: tabular-nums;
+}
+
+.tick {
+  display: block;
+  margin-bottom: var(--space-6);
+  color: var(--accent);
+}
+
+.link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: opacity 150ms var(--ease-out);
+}
+
+.link:hover { opacity: 0.7; }
+.link.inline { display: inline; }
+
+:where(a):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
