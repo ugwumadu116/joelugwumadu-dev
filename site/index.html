@@ -1,135 +1,183 @@
 <!doctype html>
 <!--
-  #9 joelugwumadu.dev — the harbour office.  Direction: "THE SHIPPING BOARD".
-  The page is a daylight harbour office; the departure board is a physical dark
-  object on the wall. The board IS the progress stat — no tiles, no counters.
-  Live rows are lit and clickable; the yard and the queue stay dim.
-  Signature motion: one split-flap shuffle on the live rows at load.
+  #9 joelugwumadu.dev — v2 "THE FLEET".
+  Split layout: sticky identity rail (marclou.com) on a near-black, quiet page
+  (akinkunmi.dev). The signature: each product card is a miniature of that
+  product's real landing page — Ship Am's night skyline flickers, the Playbook's
+  receipts line climbs, Syndicate's ledger ticks, ClipFast's strip glows.
+  The portfolio thesis (no two products look related) rendered literally.
 -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Joel Ugwumadu — thirty ships, three at sea</title>
-<meta name="description" content="Joel Ugwumadu is shipping thirty small, paid products in public. Three are live. The board and the log are here.">
+<meta name="description" content="Joel Ugwumadu builds small, paid products and ships them in public from Lagos. Three are live. The whole fleet is here.">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/img/favicon-64.png">
+<link rel="apple-touch-icon" href="/img/joel-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700&family=Public+Sans:wght@400;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&family=Inconsolata:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-<header class="office-strip">
-  <span class="office-id">Joel Ugwumadu · Shipping office</span>
-  <a class="office-mail" href="mailto:joel@ampleurinc.com">joel@ampleurinc.com</a>
-</header>
+<div class="page">
 
-<main class="wrap">
+  <!-- ---------------- identity rail ---------------- -->
+  <aside class="rail">
+    <div class="rail-inner">
+      <div class="portrait">
+        <img src="/img/joel-192.png" alt="Cartoon portrait of Joel Ugwumadu" width="128" height="128">
+      </div>
 
-  <section class="hero">
-    <h1>Thirty ships.<br><em>Three at sea.</em></h1>
-    <p class="lede">
-      I build small, paid software and put all of it out in the open — what
-      each product is, where it sails, and what happens to it. This board is the
-      whole truth of the run so far.
-    </p>
-  </section>
+      <h1>Joel<br>Ugwumadu</h1>
 
-  <section class="board" aria-label="Product departure board">
-    <div class="board-strip">
-      <span>Departures — all routes</span>
-      <span class="board-stamp">Updated 07 Aug 2026</span>
+      <p class="where">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        Lagos, Nigeria
+      </p>
+
+      <p class="bio">I build small, paid products and ship them in public —
+        every launch, every price, every miss.</p>
+
+      <p class="tally"><span class="t-live">03 live</span> · <span class="t-yard">01 in the yard</span> · <span class="t-queue">26 on the slate</span></p>
+
+      <div class="rail-actions">
+        <a class="btn" href="mailto:joel@ampleurinc.com">Write to me</a>
+        <a class="btn ghost" href="https://github.com/ugwumadu116">GitHub</a>
+      </div>
     </div>
+  </aside>
 
-    <ol class="rows">
-      <li>
-        <a class="row live" href="https://syndicate.10xpolymarket.com/">
-          <span class="no" aria-hidden="true">02</span>
-          <span class="vessel flap">Syndicate</span>
-          <span class="cargo">Small pooled Polymarket positions, run by a bot, published in full</span>
-          <span class="route">syndicate.10xpolymarket.com</span>
-          <span class="status is-live">Live</span>
-        </a>
-      </li>
-      <li>
-        <a class="row live" href="https://shipam.dev/">
-          <span class="no" aria-hidden="true">07</span>
-          <span class="vessel flap">Ship Am</span>
-          <span class="cargo">Learn to ship a real, paid app in one weekend — Lagos-priced</span>
-          <span class="route">shipam.dev</span>
-          <span class="status is-live">Live</span>
-        </a>
-      </li>
-      <li>
-        <a class="row live" href="https://theb2cplaybook.com/">
-          <span class="no" aria-hidden="true">33</span>
-          <span class="vessel flap">The B2C Playbook</span>
-          <span class="cargo">The distribution operating system for consumer AI apps, taught with receipts</span>
-          <span class="route">theb2cplaybook.com</span>
-          <span class="status is-live">Live</span>
-        </a>
-      </li>
-      <li>
-        <div class="row yard">
-          <span class="no" aria-hidden="true">34</span>
-          <span class="vessel">ClipFast</span>
-          <span class="cargo">Long video in — ranked, captioned 9:16 clips out</span>
-          <span class="route">route pending</span>
-          <span class="status is-yard">Fitting out</span>
+  <!-- ---------------- the fleet ---------------- -->
+  <main class="fleet">
+
+    <section aria-label="Live and in-build products" class="cards">
+
+      <a class="card" href="https://shipam.dev/">
+        <div class="scene scene-shipam" aria-hidden="true">
+          <span class="sa-clock">FRI 21:41 → SUN 06:12</span>
+          <div class="sa-sky"></div>
+          <div class="sa-city" id="sa-city"></div>
         </div>
-      </li>
-      <li>
-        <div class="row queue">
-          <span class="no" aria-hidden="true">··</span>
-          <span class="vessel">Twenty-six more on the slate</span>
-          <span class="cargo"></span>
-          <span class="route"></span>
-          <span class="status is-queue">Queued</span>
+        <div class="card-body">
+          <h2>Ship Am <span class="chip live">Live</span></h2>
+          <p>Learn to ship a real, paid app in one weekend — Lagos-priced, naira checkout.</p>
+          <span class="domain">shipam.dev</span>
         </div>
-      </li>
-    </ol>
-  </section>
+      </a>
 
-  <section class="log" aria-label="Ship's log">
-    <h2>The log</h2>
-    <ol class="entries">
-      <li><time datetime="2026-08-07">07 Aug</time><p>Ship Am and The B2C Playbook put to sea on their own domains — courses built, landing to checkout.</p></li>
-      <li><time datetime="2026-08-06">06 Aug</time><p>ClipFast built in one night: local transcription, hook scoring with reasons, burned captions. Checkout proven on both rails in test.</p></li>
-      <li><time datetime="2026-08-05">05 Aug</time><p>All 38 lessons of The B2C Playbook rendered — every claim cited on screen.</p></li>
-      <li><time datetime="2026-08-02">02 Aug</time><p>Back-office engine finished: stock counts to forecasts to reorder drafts, 90+ tests, two product skins running on it.</p></li>
-      <li><time datetime="2026-07-31">31 Jul</time><p>Keel laid. Payment rails live in both currencies, one webhook router behind every product to come.</p></li>
-    </ol>
-  </section>
+      <a class="card" href="https://theb2cplaybook.com/">
+        <div class="scene scene-b2c" aria-hidden="true">
+          <svg viewBox="0 0 300 110" preserveAspectRatio="none">
+            <g class="b2c-grid" stroke="#262a34" stroke-width="1">
+              <line x1="0" y1="30" x2="300" y2="30"/><line x1="0" y1="60" x2="300" y2="60"/><line x1="0" y1="90" x2="300" y2="90"/>
+            </g>
+            <polyline class="b2c-line" points="10,95 55,88 95,80 135,72 175,55 215,42 255,25 290,14" fill="none" stroke="#d8b36c" stroke-width="2"/>
+            <g fill="#6ec3ff">
+              <circle cx="10" cy="95" r="2.5"/><circle cx="95" cy="80" r="2.5"/><circle cx="175" cy="55" r="2.5"/><circle cx="290" cy="14" r="2.5"/>
+            </g>
+          </svg>
+          <span class="b2c-a">$250k</span><span class="b2c-b">$1.12M</span>
+        </div>
+        <div class="card-body">
+          <h2>The B2C Playbook <span class="chip live">Live</span></h2>
+          <p>The distribution operating system for consumer AI apps — taught with receipts on screen.</p>
+          <span class="domain">theb2cplaybook.com</span>
+        </div>
+      </a>
 
-  <footer class="foot">
-    <p>Buying something, building something, or want a product like these for your
-      own business — <a href="mailto:joel@ampleurinc.com">write to me</a>.</p>
-  </footer>
+      <a class="card" href="https://syndicate.10xpolymarket.com/">
+        <div class="scene scene-syn" aria-hidden="true">
+          <pre>POOL 04 · 12 MEMBERS · RULES PUBLISHED
+<span class="g">FILL  YES  ·  PREMIER-LG  @ .64   +3.8%</span>
+<span class="g">FILL  YES  ·  NBA-FINALS  @ .71   +1.2%</span>
+<span class="r">FILL  NO   ·  ELECTION-A  @ .55   −2.1%</span>
+<span class="g">FILL  YES  ·  CL-QUALIF   @ .68   +4.4%</span><span class="cursor">▌</span></pre>
+        </div>
+        <div class="card-body">
+          <h2>Syndicate <span class="chip live">Live</span></h2>
+          <p>Small pooled Polymarket positions, run by a bot with published rules — wins and losses public.</p>
+          <span class="domain">syndicate.10xpolymarket.com</span>
+        </div>
+      </a>
 
-</main>
+      <div class="card still">
+        <div class="scene scene-clip" aria-hidden="true">
+          <div class="strip">
+            <span></span><span></span><span class="hot"></span><span></span><span></span><span></span>
+          </div>
+          <span class="clip-cap">— captions burned in —</span>
+        </div>
+        <div class="card-body">
+          <h2>ClipFast <span class="chip yard">In the yard</span></h2>
+          <p>Long video in — ranked, captioned 9:16 clips out. Fitting out for launch.</p>
+          <span class="domain">route pending</span>
+        </div>
+      </div>
+
+      <div class="card still slate">
+        <div class="scene scene-slate" aria-hidden="true" id="slate-dots"></div>
+        <div class="card-body">
+          <h2>Twenty-six more <span class="chip queue">Queued</span></h2>
+          <p>The rest of the thirty, built one at a time, each with its own face.</p>
+          <span class="domain">on the slate</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ---------------- the log ---------------- -->
+    <section class="log" aria-label="Ship's log">
+      <h3>The log</h3>
+      <ol>
+        <li><time datetime="2026-08-07">07 Aug</time><p>Ship Am and The B2C Playbook live on their own domains.</p></li>
+        <li><time datetime="2026-08-06">06 Aug</time><p>ClipFast built in one night — transcription, hook scoring, burned captions.</p></li>
+        <li><time datetime="2026-08-05">05 Aug</time><p>All 38 Playbook lessons rendered, every claim cited on screen.</p></li>
+        <li><time datetime="2026-08-02">02 Aug</time><p>Back-office engine done: counts → forecast → reorder, 90+ tests.</p></li>
+        <li><time datetime="2026-07-31">31 Jul</time><p>Keel laid — payment rails in two currencies, one webhook router.</p></li>
+      </ol>
+    </section>
+
+    <footer class="foot">
+      <p>Buying something, building something, or want a product like these for your own
+        business — <a href="mailto:joel@ampleurinc.com">write to me</a>.</p>
+    </footer>
+
+  </main>
+</div>
 
 <script>
-// Split-flap shuffle on the live vessel names — the page's one moment.
 (function () {
-  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  var GLYPHS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  document.querySelectorAll(".flap").forEach(function (el, rowIdx) {
-    var final = el.textContent;
-    el.setAttribute("aria-label", final);
-    var frame = 0, ticks = 14, rowDelay = rowIdx * 120;
-    setTimeout(function tick() {
-      frame++;
-      var settled = Math.floor((frame / ticks) * final.length);
-      var out = "";
-      for (var i = 0; i < final.length; i++) {
-        if (i < settled || final[i] === " ") out += final[i];
-        else out += GLYPHS[(Math.random() * GLYPHS.length) | 0];
+  var reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Ship Am miniature: a strip of buildings with windows that keep odd hours.
+  var city = document.getElementById("sa-city");
+  if (city) {
+    var heights = [34, 52, 40, 64, 30, 58, 44, 68, 36, 50, 42, 60];
+    heights.forEach(function (h) {
+      var b = document.createElement("i");
+      b.style.height = h + "px";
+      for (var w = 0; w < Math.floor(h / 9) * 2; w++) {
+        var win = document.createElement("s");
+        if (Math.random() < 0.38) {
+          win.className = "lit";
+          if (!reduced && Math.random() < 0.35) {
+            win.style.animationDelay = (Math.random() * 6).toFixed(2) + "s";
+            win.classList.add("flick");
+          }
+        }
+        b.appendChild(win);
       }
-      el.textContent = out;
-      if (frame < ticks) setTimeout(tick, 42);
-      else el.textContent = final;
-    }, rowDelay);
-  });
+      city.appendChild(b);
+    });
+  }
+
+  // Slate miniature: twenty-six berths, unlit.
+  var slate = document.getElementById("slate-dots");
+  if (slate) for (var i = 0; i < 26; i++) slate.appendChild(document.createElement("i"));
 })();
 </script>
 
