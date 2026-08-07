@@ -1,33 +1,137 @@
 <!doctype html>
+<!--
+  #9 joelugwumadu.dev — the harbour office.  Direction: "THE SHIPPING BOARD".
+  The page is a daylight harbour office; the departure board is a physical dark
+  object on the wall. The board IS the progress stat — no tiles, no counters.
+  Live rows are lit and clickable; the yard and the queue stay dim.
+  Signature motion: one split-flap shuffle on the live rows at load.
+-->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Joel Ugwumadu — shipping 30 products</title>
-<meta name="description" content="Joel Ugwumadu is building and shipping thirty paid products in public. Follow the count.">
+<title>Joel Ugwumadu — thirty ships, three at sea</title>
+<meta name="description" content="Joel Ugwumadu is shipping thirty small, paid products in public. Three are live. The board and the log are here.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700&family=Public+Sans:wght@400;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <main class="wrap">
-    <p class="eyebrow">Joel Ugwumadu</p>
-    <h1>Thirty products.<br>Shipped in public.</h1>
+
+<header class="office-strip">
+  <span class="office-id">Joel Ugwumadu · Shipping office</span>
+  <a class="office-mail" href="mailto:joel@ampleurinc.com">joel@ampleurinc.com</a>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <h1>Thirty ships.<br><em>Three at sea.</em></h1>
     <p class="lede">
-      I build small, paid software and put every one of them out in the open — what
-      works, what does not, and what it earns.
+      I build small, paid software and put all of it out in the open — what
+      each product is, where it sails, and what happens to it. This board is the
+      whole truth of the run so far.
     </p>
+  </section>
 
-    <dl class="count">
-      <div><dt>Shipped</dt><dd>0</dd></div>
-      <div><dt>In build</dt><dd>1</dd></div>
-      <div><dt>Planned</dt><dd>30</dd></div>
-    </dl>
+  <section class="board" aria-label="Product departure board">
+    <div class="board-strip">
+      <span>Departures — all routes</span>
+      <span class="board-stamp">Updated 07 Aug 2026</span>
+    </div>
 
-    <p class="note">
-      The full portfolio and the build log land here shortly. The payments
-      infrastructure behind them is already running.
-    </p>
+    <ol class="rows">
+      <li>
+        <a class="row live" href="https://syndicate.10xpolymarket.com/">
+          <span class="no" aria-hidden="true">02</span>
+          <span class="vessel flap">Syndicate</span>
+          <span class="cargo">Small pooled Polymarket positions, run by a bot, published in full</span>
+          <span class="route">syndicate.10xpolymarket.com</span>
+          <span class="status is-live">Live</span>
+        </a>
+      </li>
+      <li>
+        <a class="row live" href="https://shipam.dev/">
+          <span class="no" aria-hidden="true">07</span>
+          <span class="vessel flap">Ship Am</span>
+          <span class="cargo">Learn to ship a real, paid app in one weekend — Lagos-priced</span>
+          <span class="route">shipam.dev</span>
+          <span class="status is-live">Live</span>
+        </a>
+      </li>
+      <li>
+        <a class="row live" href="https://theb2cplaybook.com/">
+          <span class="no" aria-hidden="true">33</span>
+          <span class="vessel flap">The B2C Playbook</span>
+          <span class="cargo">The distribution operating system for consumer AI apps, taught with receipts</span>
+          <span class="route">theb2cplaybook.com</span>
+          <span class="status is-live">Live</span>
+        </a>
+      </li>
+      <li>
+        <div class="row yard">
+          <span class="no" aria-hidden="true">34</span>
+          <span class="vessel">ClipFast</span>
+          <span class="cargo">Long video in — ranked, captioned 9:16 clips out</span>
+          <span class="route">route pending</span>
+          <span class="status is-yard">Fitting out</span>
+        </div>
+      </li>
+      <li>
+        <div class="row queue">
+          <span class="no" aria-hidden="true">··</span>
+          <span class="vessel">Twenty-six more on the slate</span>
+          <span class="cargo"></span>
+          <span class="route"></span>
+          <span class="status is-queue">Queued</span>
+        </div>
+      </li>
+    </ol>
+  </section>
 
-    <a class="link" href="mailto:joel@ampleurinc.com">Get in touch</a>
-  </main>
+  <section class="log" aria-label="Ship's log">
+    <h2>The log</h2>
+    <ol class="entries">
+      <li><time datetime="2026-08-07">07 Aug</time><p>Ship Am and The B2C Playbook put to sea on their own domains — courses built, landing to checkout.</p></li>
+      <li><time datetime="2026-08-06">06 Aug</time><p>ClipFast built in one night: local transcription, hook scoring with reasons, burned captions. Checkout proven on both rails in test.</p></li>
+      <li><time datetime="2026-08-05">05 Aug</time><p>All 38 lessons of The B2C Playbook rendered — every claim cited on screen.</p></li>
+      <li><time datetime="2026-08-02">02 Aug</time><p>Back-office engine finished: stock counts to forecasts to reorder drafts, 90+ tests, two product skins running on it.</p></li>
+      <li><time datetime="2026-07-31">31 Jul</time><p>Keel laid. Payment rails live in both currencies, one webhook router behind every product to come.</p></li>
+    </ol>
+  </section>
+
+  <footer class="foot">
+    <p>Buying something, building something, or want a product like these for your
+      own business — <a href="mailto:joel@ampleurinc.com">write to me</a>.</p>
+  </footer>
+
+</main>
+
+<script>
+// Split-flap shuffle on the live vessel names — the page's one moment.
+(function () {
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var GLYPHS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  document.querySelectorAll(".flap").forEach(function (el, rowIdx) {
+    var final = el.textContent;
+    el.setAttribute("aria-label", final);
+    var frame = 0, ticks = 14, rowDelay = rowIdx * 120;
+    setTimeout(function tick() {
+      frame++;
+      var settled = Math.floor((frame / ticks) * final.length);
+      var out = "";
+      for (var i = 0; i < final.length; i++) {
+        if (i < settled || final[i] === " ") out += final[i];
+        else out += GLYPHS[(Math.random() * GLYPHS.length) | 0];
+      }
+      el.textContent = out;
+      if (frame < ticks) setTimeout(tick, 42);
+      else el.textContent = final;
+    }, rowDelay);
+  });
+})();
+</script>
+
 </body>
 </html>
