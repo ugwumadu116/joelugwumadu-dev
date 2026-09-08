@@ -390,6 +390,18 @@ h3 {
 
 .log p { margin: 0; font-size: 14px; color: var(--ink-soft); max-width: 60ch; }
 
+/* ---------------- faq ---------------- */
+
+.faq { padding-top: var(--space-16); }
+.faq-item { padding: var(--space-3) 0; border-top: 1px solid var(--edge); }
+.faq-item h4 {
+  margin: 0 0 var(--space-2);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+}
+.faq-item p { margin: 0; font-size: 14px; color: var(--ink-soft); max-width: 60ch; }
+
 /* ---------------- footer ---------------- */
 
 .foot {
