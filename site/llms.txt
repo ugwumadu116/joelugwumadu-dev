@@ -18,6 +18,10 @@ Contact: joel@ampleurinc.com · GitHub: https://github.com/ugwumadu116 · X: htt
 - [Metrix](https://metrix.rivrafrica.com/): Privacy-first web analytics — no cookies, no
   personal data collected, no consent banner required. A fork of Umami re-themed and hosted
   independently.
+- [Fix My App](https://fixmyapp.rivrafrica.com/): fixed-price repairs for apps built with
+  Lovable, Bolt, v0, Cursor or Replit — a real engineer, fixed turnaround, refund if not fixed.
+- [Graded](https://graded.rivrafrica.com/): fixed-price penetration tests and audit-ready security
+  reports for startups, bought at checkout instead of through a sales call.
 
 ## In progress
 
