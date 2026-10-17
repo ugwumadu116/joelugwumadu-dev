@@ -13,8 +13,6 @@ Contact: joel@ampleurinc.com · GitHub: https://github.com/ugwumadu116 · X: htt
   paid app in one weekend, priced in naira for the Nigerian market.
 - [The B2C Playbook](https://theb2cplaybook.com/): A course on distribution for consumer AI
   apps, taught with real revenue receipts shown on screen rather than theory alone.
-- [Syndicate](https://syndicate.10xpolymarket.com/): Small pooled Polymarket prediction-market
-  positions, run by an automated bot against published rules, with wins and losses made public.
 - [Metrix](https://metrix.rivrafrica.com/): Privacy-first web analytics — no cookies, no
   personal data collected, no consent banner required. A fork of Umami re-themed and hosted
   independently.
@@ -22,6 +20,13 @@ Contact: joel@ampleurinc.com · GitHub: https://github.com/ugwumadu116 · X: htt
   Lovable, Bolt, v0, Cursor or Replit — a real engineer, fixed turnaround, refund if not fixed.
 - [Graded](https://graded.rivrafrica.com/): fixed-price penetration tests and audit-ready security
   reports for startups, bought at checkout instead of through a sales call.
+
+## Live games
+
+- [Drownmark](https://drownmark.com/): an action RPG that plays in the browser — hordes of
+  the drowned, loot, and a boss called the Salt Abbot. No download.
+- [Hashire](https://hashire.drownmark.com/): an endless runner — Mira races through night
+  cities in Japan and Kowloon with a pack of monsters on her heels.
 
 ## In progress
 
