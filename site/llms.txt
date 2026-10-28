@@ -11,8 +11,6 @@ Contact: joel@ampleurinc.com · GitHub: https://github.com/ugwumadu116 · X: htt
 
 - [Ship Am](https://shipam.dev/): A weekend cohort that teaches developers to ship a real,
   paid app in one weekend, priced in naira for the Nigerian market.
-- [The B2C Playbook](https://theb2cplaybook.com/): A course on distribution for consumer AI
-  apps, taught with real revenue receipts shown on screen rather than theory alone.
 - [Metrix](https://metrix.rivrafrica.com/): Privacy-first web analytics — no cookies, no
   personal data collected, no consent banner required. A fork of Umami re-themed and hosted
   independently.
